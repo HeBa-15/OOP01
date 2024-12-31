@@ -159,5 +159,12 @@ namespace Common
 
 
 
+    public enum Gender
+    { 
+        Male,Female
+    }
 
+    public delegate string Func(int Number);
+
+    public record Person (int Id,string Name);
 }
