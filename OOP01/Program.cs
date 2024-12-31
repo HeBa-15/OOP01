@@ -13,6 +13,11 @@ namespace OOP01
         static void Main(string[] args)
         {
             TypeA typeA = new TypeA();
+
+            // typeA.x = 10; [invalid] x is inaccessible due to its protection level "private"
+            // typeA.y = 10; [invalid] y is inaccessible due to its protection level "internal"
+               typeA.z = 30;  //[valid]  z is public
+
         }
     }
 }

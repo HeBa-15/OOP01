@@ -58,6 +58,16 @@ namespace Common
         ///
 
 
+
+        private int x;
+        internal int y;
+        public int z;
+
+        public void print()
+        {
+            Console.WriteLine(x);
+        }
+
     }
 
     class TypeC
