@@ -34,7 +34,7 @@ namespace Common
         // 6. Constructors
         // 7. Destructors
         // 8. Events
-        // 9. Static Members (Static Fields , Static Properties ,Static Methods , Static Constructor)
+        // 9. Static Members (Static Fields , Static Properties ,Static Methods , Static Constructor) and Constants
         // 10. Nested Types (Classes , Structs,Interfaces , Enums and etc)
 
 
@@ -47,11 +47,11 @@ namespace Common
         /// 5. internal protected
         /// 6. public
 
-       
+
         /// Default Access Modifier inside the class and struct is 'private'
         ///
-    
-    
+
+
     }
 
     class TypeC
@@ -74,7 +74,8 @@ namespace Common
         /// 5. Operators
         /// 6. Constructors
         /// 7. Events
-        /// 8. Nested Types (Classes , Structs,Interfaces , Enums and etc)
+        ///  8. Static Members (Static Fields , Static Properties ,Static Methods , Static Constructor) and Constants
+        /// 9. Nested Types (Classes , Structs,Interfaces , Enums and etc)
 
 
 
@@ -88,4 +89,75 @@ namespace Common
         ///
 
     }
+
+
+
+    public interface IVechile
+    {
+
+
+        //What You Can Write inside the Interface?
+        //1. Signature For Method
+        //2. Signature For Property
+        //3. Default Implemented Method [C# 8.0 NEW Feature (.NET Core 3.1)]
+        //4. Static Members  [C# 8.0 NEW Feature (.NET Core 3.1)]
+        //    - Static  Method
+        //    - Static  Property
+        //    - Static  Fields [Constants]
+        //    - static  Events
+
+        /// Allowed Access Modifiers inside the Interface? 
+        /// 
+        /// 1. private protected
+        /// 2. protected
+        /// 3. internal
+        /// 4. internal protected
+        /// 5. public
+
+        /// Default Access Modifier inside the Interface [public]
+       
+
+
+
+
+        public void Accelerate();
+    }
+    public interface IFlyableVechile
+    {
+        public void Accelerate();
+
+    }
+
+    public class Car
+    {
+
+    }
+
+
+
+    public class BMWCar : Car, IVechile
+    {
+        public void Accelerate()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class Airplane
+    {
+
+    }
+
+
+    public class F16Airplane : Airplane, IVechile, IFlyableVechile
+    {
+        public void Accelerate()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
+
+
 }
