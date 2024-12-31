@@ -59,14 +59,22 @@ namespace Common
 
 
 
-        private int x;
-        internal int y;
-        public int z;
+        //private int x;
+        //internal int y;
+        //public int z;
 
-        public void print()
-        {
-            Console.WriteLine(x);
-        }
+        //public void print()
+        //{
+        //    Console.WriteLine(x);
+        //}
+
+
+        private protected int x;   //private
+        protected int y;           //private
+        internal protected int z;  //internal
+
+
+        
 
     }
 

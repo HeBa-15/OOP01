@@ -6,7 +6,28 @@ using System.Threading.Tasks;
 
 namespace Common
 {
-    internal class Class1
+
+    abstract class EmployeeBase
     {
+        private protected int Id;
+        private protected string? Name;
+        private protected int Age;
+
+        internal protected void Test()
+        { 
+        }
+    }
+    class FullTimeEmployee : EmployeeBase
+    {
+
+        private decimal Salary;
+
+    }
+
+    class PartTimeEmployee : EmployeeBase
+    {
+
+        private decimal HourRate;
+
     }
 }
