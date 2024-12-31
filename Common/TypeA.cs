@@ -21,7 +21,13 @@ namespace Common
     ///2. public
     ///3. file [C# 11.0 Feature (.NET 7.0)]
 
+    namespace Models
+    {
+        class Employee
+        {
 
+        }
+    }
     public class TypeA
     {
         //What You Can Write inside the Class?

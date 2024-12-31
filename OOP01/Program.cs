@@ -1,4 +1,4 @@
-﻿using Common;
+﻿ global using Common;
 using System;
 
 namespace OOP01
