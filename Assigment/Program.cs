@@ -69,33 +69,49 @@
 
             #endregion
 
+            #region Q3:Assign the following Permissions (Read, write, Delete, Execute) in a form of Enum.Create Variable from previous Enum to Add and Remove Permission from variable, check if specific Permission is existed inside variable
+
+            Permission Permission = Permission.Read;
+           
+            Permission |= Permission.Read;
+            Permission |= Permission.Write;
+         
+            Permission &= ~Permission.Write;
+           
+            bool hasReadPermission = (Permission & Permission.Read) == Permission.Read;
+            bool hasWritePermission = (Permission & Permission.Write) == Permission.Write;
+          
+            Console.WriteLine($"User Permissions: { Permission}");
+            Console.WriteLine($" Read Permission:  { hasReadPermission}");
+            Console.WriteLine($" Write Permission:  { hasWritePermission}");
+
+            #endregion
 
             #region Q4:Create an enum called "Colors" with the basic colors (Red, Green, Blue) as its members. Write a C# program that takes a color name as input from the user and displays a message indicating whether the input color is a primary color or not.
 
-            Console.WriteLine("enter a color");
-            string colorInput = Console.ReadLine();
+            //Console.WriteLine("enter a color");
+            //string colorInput = Console.ReadLine();
 
-            if (Enum.TryParse(colorInput, true,out Colors color))
-            {
-                if (color == Colors.Red || color == Colors.Green || color == Colors.Blue)
-                {
-                    Console.WriteLine("Primary Color");
-                }
-                else
-                    Console.WriteLine("Not Primary Color");
-            }
-            else
-                Console.WriteLine("invalid color");
+            //if (Enum.TryParse(colorInput, true,out Colors color))
+            //{
+            //    if (color == Colors.Red || color == Colors.Green || color == Colors.Blue)
+            //    {
+            //        Console.WriteLine("Primary Color");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Not Primary Color");
+            //    }
+            //}
+            //else 
+            //{
+            //    Console.WriteLine("invalid color");
+            //}
 
 
 
-            if (Enum.TryParse(colorInput, out Colors colors))
-            {
-                Console.WriteLine("Primary Color");
 
-            }
-            else
-                Console.WriteLine("invalid color");
+
 
 
             #endregion
