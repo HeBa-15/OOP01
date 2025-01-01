@@ -125,9 +125,32 @@ namespace OOP01
             /// MyP ^= Permission.Execute;
             /// MyP ^= Permission.Execute;
             /// Console.WriteLine(MyP); // Write
+            /// 
+
+
+
 
 
             #endregion
+
+
+            #region Struct
+            Point P1;
+            // Declare for Object of type "Point".
+            // CLR Will Allocate 8 UnIntialized Bytes at STACK.
+
+            P1 = new Point();
+            // new -- > is just for the Constructor Selection that will initialize the struct object attributes 
+
+
+            Console.WriteLine(P1.X);
+            Console.WriteLine(P1.Y);
+
+
+            Point point = new Point(1, 2);
+            Console.WriteLine(point.ToString()); // Output: (1, 2)
+            #endregion
+
 
         }
     }
