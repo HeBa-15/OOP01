@@ -28,8 +28,16 @@ namespace OOP01
 
     enum Gender
     {
-        Male, Female
+        Male=1, Female=2
     }
+
+    //byte = 8 bites [0:255]
+    [Flags]
+    enum Permission : byte
+    {
+        Read = 1, Write = 2, Delete = 4, Update = 8, Test = 16, XX = 32, YY = 64, ZZ = 128
+    }
+
 
     internal class Program
     {
@@ -87,6 +95,31 @@ namespace OOP01
             /// Console.WriteLine(myGrade); // 10
 
             #endregion
+
+            #region Part 02 Casting
+            // Gender myGender;
+            // myGender = /* UnBoxing */(Gender) Enum.Parse(typeof(Gender) /* Boxing */ , "male", true);
+            // myGender = Enum.Parse<Gender>("male", true);
+
+
+            // Enum.TryParse(typeof(Gender), "Male", true, out object? result /*Boxing*/ );
+            // myGender = (Gender) /* UnBoxing */ (result ?? Gender.Male);
+
+
+            //Enum.TryParse/*<Gender>*/("Male", true, out myGender);
+
+            // Console.WriteLine(myGender);
+
+            #endregion
+
+
+           // part17
+           // Permission myPermissions = Permission.Read;
+           // myPermissions = (Permission)255;
+           // Console.WriteLine(myPermissions);
+
+           
+
 
             #endregion
 
