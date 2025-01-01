@@ -113,12 +113,18 @@ namespace OOP01
             #endregion
 
 
-           // part17
-           // Permission myPermissions = Permission.Read;
-           // myPermissions = (Permission)255;
-           // Console.WriteLine(myPermissions);
+            // part17
+            // Permission myPermissions = Permission.Read;
+            // myPermissions = (Permission)255;
+            // Console.WriteLine(myPermissions);
 
-           
+            /// part18
+            /// Permission MyP = (Permission)3; // Write, Read
+            /// MyP |= Permission.Execute; // MyP | Permission.Execute; 3[0011] | 4[0100] = 7
+            /// MyP &= ~(Permission.Read); // 0010 => 1101 & 0111 = 0101
+            /// MyP ^= Permission.Execute;
+            /// MyP ^= Permission.Execute;
+            /// Console.WriteLine(MyP); // Write
 
 
             #endregion
